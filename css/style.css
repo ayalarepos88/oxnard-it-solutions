@@ -7911,3 +7911,123 @@ select {
         translateY(-8px)
         rotate(-45deg);
 }
+
+
+
+/* =========================================================
+   CONTACT FORM INTERACTION STATES
+   ========================================================= */
+
+.contact-submit:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.78;
+
+    transform: none;
+}
+
+
+/* SENDING SPINNER */
+
+.submit-spinner {
+    width: 17px;
+    height: 17px;
+
+    display: inline-block;
+
+    margin-left: 9px;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.35);
+
+    border-top-color: var(--white);
+
+    border-radius: 50%;
+
+    animation:
+        contact-spinner
+        0.75s linear
+        infinite;
+}
+
+@keyframes contact-spinner {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* STATUS MESSAGE */
+
+.form-status {
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    text-align: left;
+}
+
+.form-status strong,
+.form-status span {
+    display: block;
+}
+
+.form-status strong {
+    margin-bottom: 4px;
+
+    font-size: 0.88rem;
+}
+
+.form-status span {
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+/* SUCCESS */
+
+.form-status-success {
+    display: block;
+
+    border:
+        1px solid rgba(32, 196, 217, 0.28);
+
+    color: #0B5260;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(32, 196, 217, 0.10),
+            rgba(22, 119, 255, 0.06)
+        );
+}
+
+.form-status-success strong {
+    color: #087687;
+}
+
+
+/* ERROR */
+
+.form-status-error {
+    display: block;
+
+    border:
+        1px solid rgba(210, 68, 68, 0.20);
+
+    color: #8A3030;
+
+    background:
+        rgba(210, 68, 68, 0.07);
+}
+
+.form-status-error strong {
+    color: #A52D2D;
+}
