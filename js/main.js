@@ -168,6 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const formData =
                     new FormData(contactForm);
 
+                const turnstileToken =
+                    formData.get("cf-turnstile-response") || "";
+
                 const payload = {
 
                     name:
@@ -198,11 +201,32 @@ document.addEventListener("DOMContentLoaded", () => {
                         ).trim(),
 
                     companyWebsite:
-                        (formData.get("companyWebsite") || "").trim()
+                        (formData.get("companyWebsite") || "").trim(),
+
+                    turnstileToken:
+                        turnstileToken.trim(),
 
                 };
 
+                if (!turnstileToken.trim()) {
 
+                    formStatus.className =
+                        "form-status form-status-error";
+
+                    formStatus.innerHTML = `
+                        <strong>
+                            Security verification required.
+                        </strong>
+
+                        <span>
+                            Please complete the security check
+                            before sending your request.
+                        </span>
+                    `;
+
+                    return;
+
+                }
                 /* -----------------------------------------
                    SUBMITTING STATE
                    ----------------------------------------- */

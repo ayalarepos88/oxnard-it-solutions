@@ -13,6 +13,11 @@
 
     <link rel="icon" type="image/png" href="/images/logo-icon.png">
     <link rel="stylesheet" href="/css/style.css">
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+    ></script>
 </head>
 
 <body>
@@ -649,6 +654,30 @@
 
                         </div>
 
+                        <!-- SECURITY VERIFICATION -->
+                        <div class="form-group form-group-full form-security">
+
+                            <label>
+                                Security Verification
+                                <span>*</span>
+                            </label>
+
+                            <p class="security-description">
+                                Please complete the quick security check before
+                                sending your request.
+                            </p>
+
+                            <div class="turnstile-wrapper">
+
+                                <div
+                                    class="cf-turnstile"
+                                    data-sitekey="0x4AAAAAAFnc73K6nbVwIxA4"
+                                    data-theme="light"
+                                ></div>
+
+                            </div>
+
+                        </div>
 
                         <!-- SUBMIT -->
                         <div class="form-submit-area form-group-full">

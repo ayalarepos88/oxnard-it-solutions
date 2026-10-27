@@ -8054,3 +8054,61 @@ select {
     width: 1px;
     height: 1px;
 }
+
+
+
+/* =========================================================
+   CLOUDFLARE TURNSTILE
+   ========================================================= */
+
+.form-security {
+    margin-top: 4px;
+}
+
+.security-description {
+    margin:
+        -1px 0
+        10px;
+
+    color: var(--text-soft);
+
+    font-size: 0.76rem;
+}
+
+.turnstile-wrapper {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FAFCFE,
+            #F5FAFD
+        );
+}
+
+
+/* MOBILE */
+
+@media (max-width: 420px) {
+
+    .turnstile-wrapper {
+        padding:
+            12px
+            10px;
+    }
+
+    .cf-turnstile {
+        max-width: 100%;
+    }
+
+}
