@@ -195,7 +195,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         (
                             formData.get("contactPreference")
                             || "email"
-                        ).trim()
+                        ).trim(),
+
+                    companyWebsite:
+                        (formData.get("companyWebsite") || "").trim()
 
                 };
 

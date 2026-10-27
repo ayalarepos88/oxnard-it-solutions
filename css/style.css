@@ -8031,3 +8031,26 @@ select {
 .form-status-error strong {
     color: #A52D2D;
 }
+
+
+/* =========================================================
+   CONTACT FORM HONEYPOT
+   Anti-spam field hidden from normal visitors
+   ========================================================= */
+
+.form-honeypot {
+    position: absolute;
+
+    left: -10000px;
+    top: auto;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+.form-honeypot input {
+    width: 1px;
+    height: 1px;
+}
