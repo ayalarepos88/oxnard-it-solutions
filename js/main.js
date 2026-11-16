@@ -302,6 +302,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     }
 
+                    /* -------------------------------------
+                        GOOGLE ADS CONVERSION
+                        ------------------------------------- */
+
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-18579031772/BedaCKqe1rkdENyNlptF',
+                        'value': 1.0,
+                        'currency': 'USD'
+                    });
+
 
                     /* -------------------------------------
                        SUCCESS
